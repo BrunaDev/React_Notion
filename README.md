@@ -15,7 +15,7 @@ Para executar este projeto localmente, siga os passos:
 
 1. Clone o repositório em sua máquina local usando o seguinte comando:
    ```shell
-   git clone https://github.com/BrunaDev/React_Notion.git
+   git clone https://github.com/BrunaDev/react-notion.git
    ```
 
 2. Navegue até o diretório do projeto:
