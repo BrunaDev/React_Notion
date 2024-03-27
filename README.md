@@ -60,6 +60,14 @@ Contribuições são bem-vindas! Se você gostaria de contribuir com este projet
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Visual Studio Code](https://code.visualstudio.com)
 
+## Interface
+
+<div style="display: flex;">
+  <img src="https://github.com/BrunaDev/react-notion/assets/72671246/807edd42-40cb-492a-9372-e1e5f55ff8f3" alt="imagem1" width="470" />
+  <img src="https://github.com/BrunaDev/react-notion/assets/72671246/3ad4d73b-2c0a-4785-8704-66bd25bb5646" alt="imagem2" width="470" />
+  <img src="https://github.com/BrunaDev/react-notion/assets/72671246/0165569e-390e-43b9-b151-6191ca542326" alt="imagem3" width="470" />
+</div>
+
 ##
 
 ### :small_blue_diamond: Licença
