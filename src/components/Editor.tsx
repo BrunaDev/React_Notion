@@ -9,6 +9,7 @@ import { RxFontBold, RxFontItalic, RxStrikethrough, RxCode, RxChevronDown, RxCha
 
 import 'highlight.js/styles/tokyo-night-dark.css';
 import { BubbleButton } from "./BubbleButton";
+import { FloatButton } from "./FloatButton";
 
 lowlight.registerLanguage('javascript', js);
 
@@ -44,7 +45,7 @@ export function Editor() {
                         return currentLineText === '/';
                     }}
                 >
-                    <button className="flex items-center gap-2 p-1 rounded min-w-[280px] hover:bg-zinc-600">
+                    <FloatButton>
                         <img
                             src="http://www.notion.so/images/blocks/text/en-US.png"
                             alt="Text"
@@ -54,11 +55,8 @@ export function Editor() {
                             <span className="text-sm">Text</span>
                             <span className="text-xs text-zinc-400">Just start writing with plain text.</span>
                         </div>
-                    </button>
-                    <button 
-                        className="flex items-center gap-2 p-1 rounded min-w-[280px] hover:bg-zinc-600"
-                        onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-                    >
+                    </FloatButton>
+                    <FloatButton onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}>
                         <img
                             src="http://www.notion.so/images/blocks/header.57a7576a.png"
                             alt="Heading"
@@ -68,7 +66,63 @@ export function Editor() {
                             <span className="text-sm">Header 1</span>
                             <span className="text-xs text-zinc-400">Big section heading.</span>
                         </div>
-                    </button>
+                    </FloatButton>
+                    <FloatButton onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+                    >
+                        <img
+                            src="http://www.notion.so/images/blocks/subheader.9aab4769.png"
+                            alt="Heading2"
+                            className="w-12 border border-zinc-600 rounded"
+                        />
+                        <div className="flex flex-col text-left">
+                            <span className="text-sm">Header 2</span>
+                            <span className="text-xs text-zinc-400">Medium section heading.</span>
+                        </div>
+                    </FloatButton>
+                    <FloatButton onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}>
+                        <img
+                            src="http://www.notion.so/images/blocks/subsubheader.d0ed0bb3.png"
+                            alt="Heading3"
+                            className="w-12 border border-zinc-600 rounded"
+                        />
+                        <div className="flex flex-col text-left">
+                            <span className="text-sm">Header 3</span>
+                            <span className="text-xs text-zinc-400">Small section heading.</span>
+                        </div>
+                    </FloatButton>
+                    <FloatButton onClick={() => editor.chain().focus().toggleBulletList().run()}>
+                        <img
+                            src="http://www.notion.so/images/blocks/bulleted-list.0e87e917.png"
+                            alt="BulletedList"
+                            className="w-12 border border-zinc-600 rounded"
+                        />
+                        <div className="flex flex-col text-left">
+                            <span className="text-sm">Bolleted list</span>
+                            <span className="text-xs text-zinc-400">Create a simple bulleted list.</span>
+                        </div>
+                    </FloatButton>
+                    <FloatButton onClick={() => editor.chain().focus().toggleOrderedList().run()}>
+                        <img
+                            src="http://www.notion.so/images/blocks/numbered-list.0406affe.png"
+                            alt="NumeredList"
+                            className="w-12 border border-zinc-600 rounded"
+                        />
+                        <div className="flex flex-col text-left">
+                            <span className="text-sm">Numered list</span>
+                            <span className="text-xs text-zinc-400">Create a list with numbering.</span>
+                        </div>
+                    </FloatButton>
+                    <FloatButton onClick={() => editor.chain().focus().toggleCodeBlock().run()}>
+                        <img
+                            src="https://www.notion.so/images/blocks/code.a8b201f4.png"
+                            alt="CodeBlock"
+                            className="w-12 border border-zinc-600 rounded"
+                        />
+                        <div className="flex flex-col text-left">
+                            <span className="text-sm">Code block</span>
+                            <span className="text-xs text-zinc-400">Capture a code snippet.</span>
+                        </div>
+                    </FloatButton>
                 </FloatingMenu>
             )}
             { editor && (
